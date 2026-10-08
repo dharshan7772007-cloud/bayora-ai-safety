@@ -23,6 +23,18 @@ function getActor(req: Request): Role {
   return 'SYSTEM_ADMIN';
 }
 
+// ROOT API STATUS
+apiRouter.get('/', (req: Request, res: Response) => {
+  const state = store.getSharedState();
+  res.json({
+    status: 'ONLINE',
+    system: 'BAYORA Cybersecurity & Model Evaluation Platform',
+    version: '1.0.0',
+    enclaveStatus: state.enclaveStatus,
+    timestamp: new Date().toISOString(),
+  });
+});
+
 // 0. SINGLE UNIFIED SHARED STATE
 apiRouter.get('/state', (req: Request, res: Response) => {
   res.json(store.getSharedState());
