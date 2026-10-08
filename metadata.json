@@ -1,0 +1,6 @@
+{
+  "name": "BAYORA — Secure Adversarial AI Safety Testing Infrastructure",
+  "description": "Zero-trust adversarial AI safety evaluation framework featuring isolated Red/Blue team enclaves, server-side policy gateway, and SHA-256 hash-linked cryptographic audit ledger.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
